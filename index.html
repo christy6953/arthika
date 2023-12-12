@@ -1,0 +1,32 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa Quiz</title>
+</head>
+<body style="background-image: url('https://wallpapercave.com/wp/Jewq1wm.jpg'); background-size: cover; background-position: center; margin: 0; padding: 0;">
+    <div style="background-color: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px; margin: 20% auto; max-width: 400px; text-align: center; color: white;">
+        <h1>Hi Arthikaaaaa 😍😍😍😍😍....</h1>
+        <p>I thank God sooo muchhhhhh that I became my office crush's secret Santa</p>
+        <p>To know me, press on this love button: <span style="font-size: 30px; cursor: pointer;" onclick="redirectToPage()">❤️</span></p>
+    </div>
+
+    <script>
+        function redirectToPage() {
+            // Redirect to 2nd page if the love button is pressed
+            window.location.href = "page2.html";
+        }
+
+        // Add an event listener to detect clicks on the body
+        document.body.addEventListener("click", function (event) {
+            // Check if the clicked element is not the love button
+            if (event.target.tagName.toLowerCase() !== "span" || event.target.innerText !== "❤️") {
+                // Redirect to error page if the click is not on the love button
+                window.location.href = "error.html";
+            }
+        });
+    </script>
+</body>
+</html>

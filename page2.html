@@ -1,0 +1,33 @@
+<!-- page2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa Quiz - Page 2</title>
+</head>
+<body style="background-image: url('https://i.pinimg.com/originals/29/2e/06/292e06a3acc988f9842ad0980034ad0e.gif'); background-size: cover; background-position: center; margin: 0; padding: 0;">
+    <div style="background-color: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px; margin: 20% auto; max-width: 400px; text-align: center; color: white;">
+        <h1>You Accepted my Love by pressing the buttonnnnnn 😍😍😍😍</h1>
+        <p>To become my ❤️, you should be intelligent also... Answer this question to get my name.</p>
+        <form onsubmit="checkAnswer(); return false;">
+            <label for="answer">Qn: What is the name of the flower often associated with love and passion?</label>
+            <input type="text" id="answer" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            var userAnswer = document.getElementById("answer").value.toLowerCase();
+
+            // Check if the answer is correct
+            if (userAnswer === "rose") {
+                window.location.href = "page3.html"; // Redirect to 3rd page if the answer is correct
+            } else {
+                window.location.href = "error2.html"; // Redirect to error2 page for incorrect answers
+            }
+        }
+    </script>
+</body>
+</html>
